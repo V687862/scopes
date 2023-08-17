@@ -17,7 +17,23 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here
+// const sandwichMaker = () => {
+//   let ingredients = ["tomato"];
+
+//   return (ingredient) => {
+//       ingredients.push(ingredient);
+//       return "One sandwich with " + ingredients.join(" and ");
+//   };
+// };
+
+const sandwichMaker = () => {
+  let order = "One sandwich with tomato";
+
+  return (ingredient) => {
+      order += " and " + ingredient;
+      return order;
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
