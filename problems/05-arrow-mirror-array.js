@@ -18,12 +18,12 @@ arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b
 const arrowMirrorArray = (array) => {
   // Create a copy of the original array
   let result = [...array];
-  
+
   // Iterate backwards through the original array and push each element to the result
   for (let i = array.length - 1; i >= 0; i--) {
       result.push(array[i]);
   }
-  
+
   return result;
 };
 

@@ -18,22 +18,33 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// Function that takes in a time (in milliseconds) and another function as its parameters.
+// // Function that takes in a time (in milliseconds) and another function as its parameters.
+// function funcTimer(time, func) {
+//   // Define a new function that will call the function passed into funcTimer.
+//   function delayedFunction() {
+//       // Call the function passed into funcTimer.
+//       func();
+//   }
+//   // Use the setTimeout method to delay the execution of the delayedFunction by the specified time.
+//   // setTimeout will execute the provided function after the given time has elapsed.
+//   setTimeout(delayedFunction, time);
+// }
+
+// const funcTimer = (time, func) =>
+//     // Directly use the setTimeout method.
+//     // This delays the execution of the passed function 'func' by the specified time in milliseconds.
+//     setTimeout(func, time);
+
 function funcTimer(time, func) {
-  // Define a new function that will call the function passed into funcTimer.
-  function delayedFunction() {
-      // Call the function passed into funcTimer.
-      func();
-  }
-  // Use the setTimeout method to delay the execution of the delayedFunction by the specified time.
-  // setTimeout will execute the provided function after the given time has elapsed.
-  setTimeout(delayedFunction, time);
+  return setTimeout(func, time);
 }
 
-const funcTimer = (time, func) => 
-    // Directly use the setTimeout method.
-    // This delays the execution of the passed function 'func' by the specified time in milliseconds.
-    setTimeout(func, time);
+function partyFunc () {
+  console.log("Party time!")
+}
+
+funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
