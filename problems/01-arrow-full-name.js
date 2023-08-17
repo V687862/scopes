@@ -14,7 +14,20 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-// Your code here
+const arrowGetFullName = person => `${person.firstName} ${person.lastName}`;
+
+// function arrowGetFullName(person) {
+//   var firstName = person.firstName;
+//   var lastName = person.lastName;
+//   var fullName = firstName + " " + lastName;
+//   return fullName;
+// }
+
+let p1 = {firstName: 'John', lastName: 'Doe'};
+console.log(arrowGetFullName(p1));  // Outputs: 'John Doe'
+
+let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+console.log(arrowGetFullName(p2));  // Outputs: 'Charlie Brown'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
