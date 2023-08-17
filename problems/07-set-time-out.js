@@ -35,9 +35,7 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 //     // This delays the execution of the passed function 'func' by the specified time in milliseconds.
 //     setTimeout(func, time);
 
-function funcTimer(time, func) {
-  return setTimeout(func, time);
-}
+const funcTimer = (time, func) => {return setTimeout(func, time);}
 
 function partyFunc () {
   console.log("Party time!")
