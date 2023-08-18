@@ -18,8 +18,14 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// Your code here
+function dynamicMultiply(num) {
+  return function(multiplier) {
+    return multiplier * num;
+  };
+}
 
+const tripler = dynamicMultiply(3);
+console.log(tripler(5)); // 15
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
