@@ -15,18 +15,22 @@ function returned by recVolume should continue to return the original volume.
 
 
 function recVolume(height) {
-  let volume = 0;
-  if (volume === 0) {
-  return function(length) {
-    return function(width) {
-      volume = height * length * width;
-      return volume;
-    }
+  let volume = [height];
+  const multi = function(num) {
+    if (volume.length < 3) {
+    volume.push(num);
   }
-}
-return volume
+    if (volume.length === 3) {
+      return volume[0] * volume[1] * volume[2];
+    }
+    return multi
+  }
+return multi
 }
 
+let measure = recVolume(8);
+console.log(measure(5))
+console.log(measure(7))
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
