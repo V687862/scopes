@@ -22,7 +22,21 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here
+function smoothieMachine(...baseIngredients) {
+  return function (...additionalIngredients) {
+    baseIngredients.push(...additionalIngredients);
+    let description = "I'm having a smoothie with " + baseIngredients.join(' and ');
+    return description;
+  };
+};
+
+/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+try {
+  module.exports = smoothieMachine;
+} catch (e) {
+  // catch the ref err
+  module.exports = null;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
