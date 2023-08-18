@@ -13,6 +13,12 @@ return function() {
   }
 };
 
+const hiddenCounter = () => {
+  let count = 0;
+  return () => ++count;
+}
+
+
 
 let hidden1 = hiddenCounter(); //returns a function
 console.log(hidden1()); // returns 1
